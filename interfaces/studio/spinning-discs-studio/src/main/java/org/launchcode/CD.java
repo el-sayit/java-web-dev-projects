@@ -1,8 +1,49 @@
 package org.launchcode;
 
-public class CD {
-    // TODO: Implement your custom interface.
+public class CD extends Media implements OpticalDisc {
+    private boolean isMusicCD;
 
-    // TODO: Determine which fields, methods, and constructors can be extended from the base class and which ones
-    //  need to be declared separately.
+    public CD(String name, boolean isMusicCD) {
+        super(name, "", 800, 700);
+        this.isMusicCD = isMusicCD;
+        setDiscType(isMusicCD ? "music CD" : " CD-RW");
+        public CD (String name){
+            this(name, false);
+        }
+    }
+
+    public boolean isMusicCD() {
+        return isMusicCD;
+    }
+
+    public void setMusicCD(boolean musicCD) {
+        isMusicCD = musicCD;
+    }
+    @Override
+    public String toString(){
+        String header = isMusicCD ? "Tracks" : " Files";
+        return super.toString() + getFormattedFileList(header);
+    }
+
+    @Override
+    public void writeFile(File file) {
+        spinDisc();
+        String fileType = isMusicCD ? "track" : "file"
+    }
+
+    @Override
+    public void removeFile(File file) {
+
+    }
+
+    @Override
+    public void reformatDisc() {
+
+    }
+
+    @Override
+    public void runFile(File file) {
+
+    }
 }
+
