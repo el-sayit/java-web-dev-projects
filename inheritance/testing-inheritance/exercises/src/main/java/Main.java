@@ -9,7 +9,8 @@ public class Main {
         HouseCat cheshireCat = new HouseCat("Cheshire", 10);
         System.out.println(cheshireCat.noise());
         System.out.println(rusty.noise());
-
+        HouseCat mishiq = new HouseCat("mishiq",2.6);
+        System.out.println(mishiq.noise());
 
     }
 }
