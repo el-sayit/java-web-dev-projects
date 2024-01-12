@@ -11,6 +11,7 @@ class CarTest {
     @BeforeEach
     public void createCarObject(){
         test_car = new Car("Toyota", "Prius", 10, 50);
+
     }
     @Test
     public void emptyTest(){
@@ -31,6 +32,11 @@ class CarTest {
         assertTrue(test_car.getGasTankLevel()==0, "getGasTankLevel() expected to be true when comparing to 0");
     }
     //TODO: gasTankLevel is accurate after driving within tank range
+    @Test
+    public void testTankLevelDrivingTankRange(){
+
+    }
+
     //TODO: gasTankLevel is accurate after attempting to drive past tank range
     //TODO: can't have more gas than tank size, expect an exception
 }
